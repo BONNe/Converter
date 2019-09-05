@@ -279,6 +279,7 @@ public class ItemDataParserUtil
 		boolean isExtended = EXTENDED.equalsIgnoreCase(inputArray[3]);
 		PotionData data = new PotionData(type, isExtended, isUpgraded);
 		Objects.requireNonNull(potionMeta).setBasePotionData(data);
+		itemStack.setItemMeta(potionMeta);
 
 		return itemStack;
 	}
